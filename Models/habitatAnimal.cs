@@ -6,8 +6,8 @@ namespace DotnetEstudo.Models
         public DateTime DataInicio { get; set; }
         public DateTime? DataFim { get; set; }
         public int animalId { get; set; }
-        public Animal animal { get; set; }
+        public Animal? animal { get; set; }
         public int habitatId { get; set; }
-        public Habitat habitat { get; set; }
+        public Habitat? habitat { get; set; }
     }
 }
