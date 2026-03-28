@@ -37,6 +37,31 @@ namespace DotnetEstudo.Service
             _context.SaveChanges();
             return animal;
         }
+        public bool Atualizar(int id, Animal animal)
+        {
+            var existente = _context.Animais.Find(id);
+            if (existente == null) return false;
+
+            existente.nome = animal.nome;
+            existente.idade = animal.idade;
+            existente.peso_KG = animal.peso_KG;
+            existente.SexoId = animal.SexoId;
+            _context.SaveChanges();
+            return true;
+        }
+
+
+        public bool Deletar(int id)
+        {
+            var animal = _context.Animais.Find(id);
+
+            if (animal == null)
+                return false;
+
+            _context.Animais.Remove(animal);
+            _context.SaveChanges();
+            return true;
+        }
     }
 
 }  

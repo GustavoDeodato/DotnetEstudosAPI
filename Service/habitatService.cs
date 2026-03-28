@@ -3,5 +3,8 @@ using DotnetEstudo.Models;
 
 namespace DotnetEstudo.Service
 {
-  
+  public class habitatService
+    {
+        
+    }
 }
